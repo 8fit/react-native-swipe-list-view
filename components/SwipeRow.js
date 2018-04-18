@@ -77,7 +77,7 @@ class SwipeRow extends Component {
 		if (this.props.preview && !this.ranPreview) {
 			this.ranPreview = true;
 			let previewOpenValue = this.props.previewOpenValue || this.props.rightOpenValue * 0.5;
-			this.getPreviewAnimation(previewOpenValue, this.props.prewiewOpenDelay)
+			this.getPreviewAnimation(previewOpenValue, this.props.previewOpenDelay)
 			.start( _ => {
 				this.getPreviewAnimation(0, PREVIEW_CLOSE_DELAY).start();
 			});
@@ -440,7 +440,7 @@ SwipeRow.defaultProps = {
 	recalculateHiddenLayout: false,
 	preview: false,
 	previewDuration: 300,
-	prewiewOpenDelay: DEFAULT_PREVIEW_OPEN_DELAY,
+	previewOpenDelay: DEFAULT_PREVIEW_OPEN_DELAY,
 	directionalDistanceChangeThreshold: 2,
 	swipeToOpenPercent: 50,
 	swipeToOpenVelocityContribution: 0,
